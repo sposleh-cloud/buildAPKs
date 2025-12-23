@@ -1,13 +1,25 @@
-name: Greetings
-
-on: [pull_request, issues]
-
-jobs:
-  greeting:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Thank you for contributing to make this project better😎  Keep up and follow to solve this issue.'
-        pr-message: 'Thank you for contributing to make this project better🎉'
+CellTowerScanner/
+├── app/
+│   ├── src/main/
+│   │   ├── java/com/example/celltowerscanner/
+│   │   │   ├── MainActivity.java           # Activité principale
+│   │   │   ├── CellTowerInfo.java         # Modèle de données
+│   │   │   └── CellTowerAdapter.java      # Adaptateur pour la liste
+│   │   ├── res/
+│   │   │   ├── layout/
+│   │   │   │   ├── activity_main.xml      # Layout principal
+│   │   │   │   └── cell_tower_item.xml    # Layout item liste
+│   │   │   ├── drawable/                  # Backgrounds et icônes
+│   │   │   ├── values/
+│   │   │   │   ├── strings.xml           # Textes français
+│   │   │   │   ├── colors.xml            # Palette de couleurs
+│   │   │   │   └── styles.xml            # Styles Material
+│   │   │   └── mipmap/                   # Icônes application
+│   │   └── AndroidManifest.xml           # Permissions et config
+│   ├── build.gradle                      # Configuration Gradle
+│   └── proguard-rules.pro               # Règles d'optimisation
+├── build.gradle                         # Configuration projet
+├── settings.gradle                      # Paramètres Gradle
+├── gradle.properties                    # Propriétés Gradle
+├── build_apk.sh                        # Script de compilation
+└── README.md                           # Documentation complète
